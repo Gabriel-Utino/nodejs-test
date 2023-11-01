@@ -1,13 +1,17 @@
-const http = require("http");
-const PORT = 8000;
+var express = require("express");
+var app = express();
+var PORT = 3000;
 
-const server = http.createServer((req, res) => {
-  //ブラウザからアクセスが来たときの処理
-  res.writeHead(200, {"Content-Type": "text/html"});
-  res.write("<h1>Gabriel</h1>");
-  res.end();
-} );
+app.get("/", (req, res) => {
+  console.log("hello gabriel");
+  res.send("こんにちは");
+})
 
-server.listen(PORT, () => {
-  console.log("server running!");
-});
+var
+
+
+
+
+
+app.listen(PORT, () => console.log("サーバー起動"));
+
